@@ -1,11 +1,123 @@
 <svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#E5E7EB"/>
-  <rect x="250" y="180" width="300" height="200" rx="8" fill="#D1D5DB"/>
-  <rect x="310" y="220" width="80" height="60" rx="4" fill="#9CA3AF"/>
-  <rect x="410" y="220" width="80" height="60" rx="4" fill="#9CA3AF"/>
-  <rect x="310" y="300" width="80" height="60" rx="4" fill="#9CA3AF"/>
-  <rect x="410" y="300" width="80" height="60" rx="4" fill="#9CA3AF"/>
-  <rect x="350" y="130" width="100" height="50" fill="#D1D5DB"/>
-  <polygon points="400,100 250,180 550,180" fill="#D1D5DB"/>
-  <text x="400" y="440" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#9CA3AF">Hotel Image</text>
+  <!-- Sky gradient background -->
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
+    </linearGradient>
+    <linearGradient id="mountainGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B7280"/>
+      <stop offset="100%" stop-color="#9CA3AF"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+
+  <!-- Sun -->
+  <circle cx="650" cy="90" r="55" fill="#FCD34D" opacity="0.9"/>
+  <circle cx="650" cy="90" r="40" fill="#FDE68A"/>
+
+  <!-- Clouds -->
+  <ellipse cx="150" cy="100" rx="70" ry="30" fill="white" opacity="0.85"/>
+  <ellipse cx="110" cy="108" rx="45" ry="25" fill="white" opacity="0.85"/>
+  <ellipse cx="190" cy="108" rx="45" ry="25" fill="white" opacity="0.85"/>
+
+  <ellipse cx="500" cy="60" rx="55" ry="22" fill="white" opacity="0.75"/>
+  <ellipse cx="465" cy="68" rx="35" ry="18" fill="white" opacity="0.75"/>
+  <ellipse cx="535" cy="68" rx="35" ry="18" fill="white" opacity="0.75"/>
+
+  <!-- Background mountains (far) -->
+  <polygon points="0,400 120,200 240,400" fill="#93C5FD" opacity="0.6"/>
+  <polygon points="100,400 250,160 400,400" fill="#7DD3FC" opacity="0.5"/>
+  <polygon points="300,400 460,140 620,400" fill="#93C5FD" opacity="0.55"/>
+  <polygon points="500,400 680,180 800,360 800,400" fill="#7DD3FC" opacity="0.5"/>
+
+  <!-- Mid mountains (closer) -->
+  <polygon points="0,450 150,250 300,450" fill="url(#mountainGrad)"/>
+  <polygon points="200,450 380,220 560,450" fill="#6B7280"/>
+  <polygon points="450,450 620,240 800,420 800,450" fill="#9CA3AF"/>
+
+  <!-- Snow caps -->
+  <polygon points="150,250 170,290 130,290" fill="white" opacity="0.9"/>
+  <polygon points="380,220 402,265 358,265" fill="white" opacity="0.9"/>
+  <polygon points="620,240 643,282 597,282" fill="white" opacity="0.9"/>
+
+  <!-- Ground / meadow -->
+  <rect x="0" y="450" width="800" height="150" fill="url(#groundGrad)"/>
+
+  <!-- Ground details - grass tufts -->
+  <ellipse cx="100" cy="452" rx="40" ry="12" fill="#22C55E"/>
+  <ellipse cx="250" cy="452" rx="55" ry="14" fill="#16A34A"/>
+  <ellipse cx="450" cy="452" rx="45" ry="12" fill="#22C55E"/>
+  <ellipse cx="650" cy="452" rx="50" ry="13" fill="#15803D"/>
+  <ellipse cx="780" cy="455" rx="35" ry="10" fill="#22C55E"/>
+
+  <!-- Trail path -->
+  <path d="M 60,600 Q 200,520 350,500 Q 500,480 600,510 Q 680,530 750,600" stroke="#D97706" stroke-width="12" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M 60,600 Q 200,520 350,500 Q 500,480 600,510 Q 680,530 750,600" stroke="#FCD34D" stroke-width="5" fill="none" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- Trees (pine) - left side -->
+  <polygon points="80,450 105,360 130,450" fill="#166534"/>
+  <polygon points="75,420 105,330 135,420" fill="#15803D"/>
+  <rect x="100" y="445" width="10" height="20" fill="#92400E"/>
+
+  <polygon points="140,450 165,370 190,450" fill="#14532D"/>
+  <polygon points="135,420 165,340 195,420" fill="#166534"/>
+  <rect x="160" y="445" width="10" height="18" fill="#92400E"/>
+
+  <!-- Trees - right side -->
+  <polygon points="620,450 645,360 670,450" fill="#166534"/>
+  <polygon points="615,420 645,330 675,420" fill="#15803D"/>
+  <rect x="640" y="445" width="10" height="20" fill="#92400E"/>
+
+  <polygon points="680,450 700,375 720,450" fill="#14532D"/>
+  <polygon points="675,422 700,348 725,422" fill="#166534"/>
+  <rect x="695" y="445" width="10" height="18" fill="#92400E"/>
+
+  <!-- Hiker figure -->
+  <!-- Body -->
+  <line x1="370" y1="430" x2="370" y2="490" stroke="#1D4ED8" stroke-width="8" stroke-linecap="round"/>
+  <!-- Head -->
+  <circle cx="370" cy="415" r="16" fill="#FDE68A"/>
+  <!-- Hiking hat -->
+  <ellipse cx="370" cy="403" rx="20" ry="6" fill="#92400E"/>
+  <rect x="358" y="394" width="24" height="12" rx="4" fill="#B45309"/>
+  <!-- Arms with hiking pole -->
+  <line x1="370" y1="445" x2="340" y2="470" stroke="#1D4ED8" stroke-width="7" stroke-linecap="round"/>
+  <line x1="370" y1="445" x2="400" y2="460" stroke="#1D4ED8" stroke-width="7" stroke-linecap="round"/>
+  <!-- Hiking pole -->
+  <line x1="340" y1="470" x2="325" y2="510" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+  <!-- Legs -->
+  <line x1="370" y1="490" x2="355" y2="530" stroke="#92400E" stroke-width="7" stroke-linecap="round"/>
+  <line x1="370" y1="490" x2="385" y2="525" stroke="#92400E" stroke-width="7" stroke-linecap="round"/>
+  <!-- Boots -->
+  <ellipse cx="352" cy="532" rx="10" ry="5" fill="#1C1917"/>
+  <ellipse cx="387" cy="527" rx="10" ry="5" fill="#1C1917"/>
+  <!-- Backpack -->
+  <rect x="372" y="425" width="22" height="30" rx="5" fill="#DC2626"/>
+  <rect x="374" y="427" width="18" height="14" rx="3" fill="#EF4444"/>
+
+  <!-- Rocks on trail -->
+  <ellipse cx="290" cy="512" rx="15" ry="9" fill="#9CA3AF"/>
+  <ellipse cx="305" cy="508" rx="10" ry="7" fill="#6B7280"/>
+  <ellipse cx="480" cy="500" rx="12" ry="7" fill="#9CA3AF"/>
+  <ellipse cx="495" cy="497" rx="8" ry="5" fill="#6B7280"/>
+
+  <!-- Small wildflowers -->
+  <circle cx="220" cy="468" r="5" fill="#FCD34D"/>
+  <circle cx="230" cy="462" r="4" fill="#F472B6"/>
+  <circle cx="240" cy="470" r="5" fill="#FCD34D"/>
+  <circle cx="540" cy="465" r="4" fill="#F472B6"/>
+  <circle cx="550" cy="460" r="5" fill="#FCD34D"/>
+  <circle cx="560" cy="468" r="4" fill="#A78BFA"/>
+
+  <!-- Birds in sky -->
+  <path d="M 200,140 Q 210,130 220,140" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 225,145 Q 235,135 245,145" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 340,110 Q 350,100 360,110" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
 </svg>
