@@ -17,6 +17,7 @@ jobs:
       contains(github.event.issue.body || '', '@claude') ||
       contains(github.event.review.body || '', '@claude')
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     environment: production
     permissions:
       contents: write
@@ -30,3 +31,5 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          model: claude-sonnet-4-6
+          allowed_tools: "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
