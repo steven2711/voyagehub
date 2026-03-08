@@ -31,6 +31,5 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          model: claude-sonnet-4-6
-          allowed_tools: "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+          claude_args: "--model claude-sonnet-4-6 --allowedTools Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
           prompt: "Implement the changes described in this issue. When done, create a pull request with your changes."
