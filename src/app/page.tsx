@@ -7,7 +7,7 @@ export default function HomePage() {
         className="relative text-white py-20"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1522163182402-834f871fd851?w=1920&q=80')",
+            "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
