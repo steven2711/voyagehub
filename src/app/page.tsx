@@ -40,37 +40,54 @@ export default function HomePage() {
                 name: "International Drive",
                 desc: "Heart of Orlando's tourist corridor",
                 count: 3,
+                image:
+                  "https://images.unsplash.com/photo-1575783970733-1aaedde1db74?w=600&q=80",
               },
               {
                 name: "Lake Buena Vista",
                 desc: "Near Walt Disney World",
                 count: 2,
+                image:
+                  "https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=600&q=80",
               },
               {
                 name: "Downtown Orlando",
                 desc: "Arts, dining, and nightlife",
                 count: 1,
+                image:
+                  "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
               },
               {
                 name: "Universal Area",
                 desc: "Steps from Universal Orlando",
                 count: 2,
+                image:
+                  "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
               },
               {
                 name: "Kissimmee",
                 desc: "Great value, close to parks",
                 count: 2,
+                image:
+                  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
               },
             ].map((area) => (
               <div
                 key={area.name}
-                className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow"
+                className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
               >
-                <h3 className="font-semibold text-lg mb-1">{area.name}</h3>
-                <p className="text-gray-500 text-sm mb-2">{area.desc}</p>
-                <p className="text-blue-600 text-sm font-medium">
-                  {area.count} {area.count === 1 ? "hotel" : "hotels"}
-                </p>
+                <img
+                  src={area.image}
+                  alt={area.name}
+                  className="w-full h-40 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="font-semibold text-lg mb-1">{area.name}</h3>
+                  <p className="text-gray-500 text-sm mb-2">{area.desc}</p>
+                  <p className="text-blue-600 text-sm font-medium">
+                    {area.count} {area.count === 1 ? "hotel" : "hotels"}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
